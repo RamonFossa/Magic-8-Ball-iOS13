@@ -28,6 +28,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="ASK">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="39"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonClickAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pUQ-oz-hcS"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="lOF-h2-BHD">
                                 <rect key="frame" x="87" y="265" width="240" height="222"/>
@@ -54,6 +57,10 @@
                             <constraint firstItem="lOF-h2-BHD" firstAttribute="top" secondItem="MDu-dE-hdF" secondAttribute="bottom" constant="90" id="kON-Yh-UXg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonOutlet" destination="aRW-DM-JsH" id="q3G-lV-Usx"/>
+                        <outlet property="imageBallOutlet" destination="lOF-h2-BHD" id="TCu-hl-a9m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
