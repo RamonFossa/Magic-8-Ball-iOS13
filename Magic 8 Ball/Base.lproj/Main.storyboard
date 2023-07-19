@@ -17,24 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRW-DM-JsH">
-                                <rect key="frame" x="122.5" y="591.5" width="169" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="ONu-2E-dAv"/>
-                                    <constraint firstAttribute="width" constant="169" id="tvQ-v5-fq9"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="linkColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="ASK">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="39"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="buttonClickAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pUQ-oz-hcS"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="lOF-h2-BHD">
-                                <rect key="frame" x="87" y="265" width="240" height="222"/>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ask me anithing..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDu-dE-hdF">
                                 <rect key="frame" x="27.5" y="101" width="359" height="57"/>
                                 <constraints>
@@ -45,20 +27,32 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="lOF-h2-BHD">
+                                <rect key="frame" x="54.5" y="248" width="305" height="273.5"/>
+                            </imageView>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SHAKE!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cM-2Q-g43">
+                                <rect key="frame" x="101" y="591.5" width="212" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="212" id="AvX-i3-Qth"/>
+                                    <constraint firstAttribute="height" constant="69" id="eAZ-3m-Jx5"/>
+                                </constraints>
+                                <color key="textColor" red="0.22067543219999999" green="0.78039215689999997" blue="0.55420420410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="57"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
-                            <constraint firstItem="aRW-DM-JsH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HFg-y9-1dN"/>
+                            <constraint firstItem="6cM-2Q-g43" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5dP-nv-avi"/>
+                            <constraint firstItem="6cM-2Q-g43" firstAttribute="top" secondItem="lOF-h2-BHD" secondAttribute="bottom" constant="70" id="Ha3-qN-aFd"/>
                             <constraint firstItem="MDu-dE-hdF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IBd-SA-F9d"/>
                             <constraint firstItem="MDu-dE-hdF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="SVh-Cd-4Hw"/>
-                            <constraint firstItem="aRW-DM-JsH" firstAttribute="top" secondItem="lOF-h2-BHD" secondAttribute="bottom" constant="70" id="ebo-bO-98G"/>
                             <constraint firstItem="lOF-h2-BHD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gZv-Ek-c6X"/>
                             <constraint firstItem="lOF-h2-BHD" firstAttribute="top" secondItem="MDu-dE-hdF" secondAttribute="bottom" constant="90" id="kON-Yh-UXg"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buttonOutlet" destination="aRW-DM-JsH" id="q3G-lV-Usx"/>
                         <outlet property="imageBallOutlet" destination="lOF-h2-BHD" id="TCu-hl-a9m"/>
                     </connections>
                 </viewController>
@@ -69,9 +63,6 @@
     </scenes>
     <resources>
         <image name="ball1" width="305" height="273.5"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
