@@ -17,28 +17,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRW-DM-JsH">
-                                <rect key="frame" x="123" y="614" width="169" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRW-DM-JsH">
+                                <rect key="frame" x="122.5" y="622.5" width="169" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="ONu-2E-dAv"/>
+                                    <constraint firstAttribute="width" constant="169" id="tvQ-v5-fq9"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="linkColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="ASK">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="39"/>
                                 </buttonConfiguration>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ask me anithing..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDu-dE-hdF">
-                                <rect key="frame" x="110" y="101" width="195" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="lOF-h2-BHD">
+                                <rect key="frame" x="87" y="265" width="240" height="222"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ask me anithing..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDu-dE-hdF">
+                                <rect key="frame" x="28" y="99" width="359" height="57"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="lOF-h2-BHD">
-                                <rect key="frame" x="87" y="265" width="240" height="222"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="aRW-DM-JsH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HFg-y9-1dN"/>
+                            <constraint firstItem="MDu-dE-hdF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IBd-SA-F9d"/>
+                            <constraint firstItem="MDu-dE-hdF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="SVh-Cd-4Hw"/>
+                            <constraint firstItem="aRW-DM-JsH" firstAttribute="top" secondItem="lOF-h2-BHD" secondAttribute="bottom" constant="70" id="ebo-bO-98G"/>
+                            <constraint firstItem="lOF-h2-BHD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gZv-Ek-c6X"/>
+                            <constraint firstItem="lOF-h2-BHD" firstAttribute="top" secondItem="MDu-dE-hdF" secondAttribute="bottom" constant="130" id="kON-Yh-UXg"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
