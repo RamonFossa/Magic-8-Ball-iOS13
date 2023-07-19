@@ -26,23 +26,24 @@ class ViewController: UIViewController {
         print("sortNewNumber() -> Entrou")
         let newNum: Int = Int.random(in: 0..<self.ballArray.count)
         
-        
-        print("sortNewNumber() -> NewNumber: \(newNum)")
-        
         if newNum != self.lastIndex {
+            print("sortNewNumber() -> Novo número: \(newNum)")
             self.lastIndex = newNum
             return newNum
         }
-        
         
         print("sortNewNumber() -> Mesmo número")
         return sortNewNumber()
     }
     
-    @IBAction func buttonClickAction(_ sender: Any) {
+    func changeBallImage() {
+        print("changeBallImage() -> Entrou")
         let newIndex = sortNewNumber()
-        
         imageBallOutlet.image = ballArray[newIndex]
+    }
+    
+    @IBAction func buttonClickAction(_ sender: Any) {
+        self.changeBallImage()
     }
 }
 
